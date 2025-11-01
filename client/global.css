@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Whimsical Color Palette */
+    --whimsical-base: 260 33% 99%;        /* FDFDFE */
+    --whimsical-soft-pink: 330 43% 97%;   /* FDF0F4 */
+    --whimsical-light-blue: 210 50% 95%;  /* EEF5F9 */
+    --whimsical-rose-pink: 345 35% 86%;   /* EAC9D1 */
+    --whimsical-lavender: 260 25% 88%;    /* D8CFE6 */
+    --whimsical-plum: 264 20% 73%;        /* B0A6C7 */
+    --whimsical-text-dark: 0 0% 20%;      /* #333333 */
+    --whimsical-text-medium: 0 0% 33%;    /* #555555 */
+
+    /* Base theme using whimsical colors */
+    --background: var(--whimsical-base);
+    --foreground: var(--whimsical-text-dark);
+
+    --card: var(--whimsical-base);
+    --card-foreground: var(--whimsical-text-dark);
+
+    --popover: var(--whimsical-base);
+    --popover-foreground: var(--whimsical-text-dark);
+
+    --primary: var(--whimsical-plum);
+    --primary-foreground: var(--whimsical-base);
+
+    --secondary: var(--whimsical-lavender);
+    --secondary-foreground: var(--whimsical-text-dark);
+
+    --muted: var(--whimsical-light-blue);
+    --muted-foreground: var(--whimsical-text-medium);
+
+    --accent: var(--whimsical-rose-pink);
+    --accent-foreground: var(--whimsical-text-dark);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: var(--whimsical-lavender);
+    --input: var(--whimsical-lavender);
+    --ring: var(--whimsical-plum);
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* styles/globals.css */
+@layer utilities {
+  .text-navy { color: #2d4a8a; }
+  .bg-navy { background-color: #2d4a8a; }
+  .text-coral { color: #ff6b6b; }
+  .bg-coral { background-color: #ff6b6b; }
+  .border-navy { border-color: #2d4a8a; }
+  .border-coral { border-color: #ff6b6b; }
+}
