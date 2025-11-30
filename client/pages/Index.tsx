@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FiUser, FiMail, FiLinkedin, FiGithub, FiCode, FiDatabase, FiBarChart2, FiCpu, FiShield, FiAward, FiBook, FiBriefcase } from "react-icons/fi";
+import { FiSend, FiMail, FiLinkedin, FiGithub, FiCode, FiDatabase, FiBarChart2, FiCpu, FiShield, FiAward, FiBook, FiBriefcase } from "react-icons/fi";
 import Hyperspeed from "./Hyperspeed";
 import DecryptedText from './DecryptedText';
 import FlowingMenu from './FlowingMenu';
@@ -28,11 +28,11 @@ const MinimalNav = () => {
           className="text-white text-lg font-light tracking-wide transition-all duration-1000 hover:tracking-widest"
           style={{ fontFamily: "'Orbitron', monospace" }}
         >
-          HARSHITA
+          Harshita Chelani
         </span>
 
         <div className="flex items-center gap-6">
-          {['About', 'Skills', 'Experience', 'Projects', 'Education', 'Contact'].map((item) => (
+          {['About', 'Projects', 'Contact'].map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`} 
@@ -48,7 +48,7 @@ const MinimalNav = () => {
           <a href="https://linkedin.com/in/harshita-chelani-8a92a2272/" className="hover:text-cyan-300 transition-all duration-700 transform hover:scale-110 hover:glow-cyan">
             <FiLinkedin className="text-xl" />
           </a>
-          <a href="https://github.com/7012" className="hover:text-cyan-300 transition-all duration-700 transform hover:scale-110 hover:glow-cyan">
+          <a href="https://github.com/grim7012" className="hover:text-cyan-300 transition-all duration-700 transform hover:scale-110 hover:glow-cyan">
             <FiGithub className="text-xl" />
           </a>
           <a href="mailto:harshch002@gmail.com" className="hover:text-cyan-300 transition-all duration-700 transform hover:scale-110 hover:glow-cyan">
@@ -103,6 +103,7 @@ const HeroSection = () => {
                 maxIterations={25}
                 animateOn="view"
                 className="text-5xl font-bold text-white mb-4 tracking-wider"
+                encryptedClassName="text-5xl font-bold text-white mb-4 tracking-wider"
                 style={{
                   fontFamily: "'Orbitron', monospace",
                   textShadow: '0 0 30px rgba(6, 182, 212, 0.8), 0 0 60px rgba(147, 51, 234, 0.6)'
@@ -116,6 +117,7 @@ const HeroSection = () => {
                 maxIterations={25}
                 animateOn="view"
                 className="text-5xl font-bold text-white mb-4 tracking-wider"
+                encryptedClassName="text-5xl font-bold text-white mb-4 tracking-wider"
                 style={{
                   fontFamily: "'Orbitron', monospace",
                   textShadow: '0 0 30px rgba(6, 182, 212, 0.8), 0 0 60px rgba(147, 51, 234, 0.6)'
@@ -158,9 +160,9 @@ const SkillsSection = () => {
               onSlowDown: () => { },
               distortion: 'turbulentDistortion',
               length: 600,
-              roadWidth: 20,
+              roadWidth: 40,
               islandWidth: 2,
-              lanesPerRoad: 6,
+              lanesPerRoad: 20,
               fov: 90,
               fovSpeedUp: 150,
               speedUp: 2,
@@ -214,7 +216,7 @@ const SkillsSection = () => {
             <div className="space-y-4 text-gray-300">
               <p className="text-lg leading-relaxed" style={{ fontFamily: "'Share Tech Mono', monospace" }}>
                 Full-stack developer and data analyst with expertise in React, TypeScript, Python, 
-                and data visualization tools. Passionate about creating cyberpunk-inspired digital 
+                and data visualization tools. Passionate about creating immersive web 
                 experiences and data-driven solutions.
               </p>
               
@@ -267,51 +269,44 @@ const SkillsSection = () => {
 // Experience Section Component with Cyberpunk Theme
 const ProjectsSection = () => {
   const projects = [
+    
+    {
+      name: "Taxing Solutions Platform",
+      description: "React frontend for finance website with real-time tax calculations",
+      skills: ["React", "JavaScript", "Tailwind", "API Integration"],
+      image: "/taxing.png",
+      link: "https://taxingsolutions.in/",
+      gradient: "from-purple-400 to-pink-500"
+    },
+    {
+      name: "Enchanya Candles",
+      description: "Landing page for a Lucknow based handmade candle business with e-commerce features",
+      skills: ["React.js", "Three.js", "Tailwind", "Framer Motion"],
+      image: "/Enchanya.png",
+      link: "https://drive.google.com/file/d/1BWxCVeSPQvOIw_RiyfN121Iv8U9Awl0o/view?usp=sharing",
+      gradient: "from-white to-yellow-300"
+    },
+    {
+      name: "Lie-to-Survive Game",
+      description: "A real-time multiplayer social deduction game where players must give hints, spot the liar, and survive!",
+      skills: ["React", "Node.js", "Socket.io", "Game Development"],
+      image: "/Survive.png",
+      link: "https://lie-to-survive-game.vercel.app/",
+      gradient: "from-yellow-400 to-orange-500"
+    },
     {
       name: "Bank Marketing Analysis",
       description: "Power BI dashboard with SQL preprocessing for banking campaign optimization",
       skills: ["Power BI", "SQL", "Data Analysis", "Dashboard"],
-      image: "/project1.jpg",
-      link: "#",
+      image: "/dashboard.png",
+      link: "https://github.com/grim7012/Bank-Marketing-Campaign-PowerBI",
       gradient: "from-cyan-400 to-blue-500"
     },
     {
-      name: "Tax Solutions Platform",
-      description: "React frontend for finance website with real-time tax calculations",
-      skills: ["React", "JavaScript", "Tailwind", "API Integration"],
-      image: "/project2.jpg",
-      link: "#",
-      gradient: "from-purple-400 to-pink-500"
-    },
-    {
-      name: "Crop Recommendation System",
-      description: "ML-powered agricultural platform for optimal crop suggestions",
-      skills: ["Python", "Machine Learning", "React", "Data Science"],
-      image: "/project3.jpg",
-      link: "#",
-      gradient: "from-green-400 to-cyan-500"
-    },
-    {
-      name: "Cyberpunk Portfolio",
-      description: "Interactive portfolio with neon cyberpunk theme and animations",
-      skills: ["Next.js", "Three.js", "Tailwind", "Framer Motion"],
-      image: "/project4.jpg",
-      link: "#",
-      gradient: "from-orange-400 to-red-500"
-    },
-    {
-      name: "E-Commerce Analytics",
-      description: "Real-time sales dashboard with predictive analytics",
-      skills: ["Power BI", "Python", "SQL", "Machine Learning"],
-      image: "/project5.jpg",
-      link: "#",
-      gradient: "from-yellow-400 to-orange-500"
-    },
-    {
-      name: "Network Security Dashboard",
-      description: "Cybersecurity monitoring platform with threat detection",
-      skills: ["React", "Node.js", "Cybersecurity", "WebSockets"],
-      image: "/project6.jpg",
+      name: "QAutobot (Axtria)",
+      description: "Saas-based intelligent automation platform for data quality and analytics in pharma",
+      skills: ["React", "TypeScript", "Python", "Data Automation"],
+      image: "/QAutobot.jpeg",
       link: "#",
       gradient: "from-indigo-400 to-purple-500"
     }
@@ -331,28 +326,15 @@ const ProjectsSection = () => {
               }}
             >
               <h2 
-                className="text-7xl font-bold bg-gradient-to-b from-cyan-400 to-purple-400 bg-clip-text text-transparent "
+                className="text-7xl font-bold bg-gradient-to-b from-cyan-400 to-purple-400 bg-clip-text text-transparent"
                 style={{
                   fontFamily: "'Orbitron', monospace",
                   textShadow: '0 0 40px rgba(6, 182, 212, 0.7), 0 0 80px rgba(147, 51, 234, 0.5)',
                   lineHeight: '0.9',
-                  transform: 'rotate(270deg)',
-    transformOrigin: 'left'
+                  rotate: '-90deg'
                 }}
               >
-                MAJOR
-              </h2>
-              <h2 
-                className="text-7xl font-bold bg-gradient-to-b from-cyan-400 to-purple-400 bg-clip-text text-transparent "
-                style={{
-                  fontFamily: "'Orbitron', monospace",
-                  textShadow: '0 0 40px rgba(6, 182, 212, 0.7), 0 0 80px rgba(147, 51, 234, 0.5)',
-                  lineHeight: '0.9',
-                  transform: 'rotate(270deg)',
-    transformOrigin: 'right'
-                }}
-              >
-                PROJECTS
+                MAJOR PROJECTS
               </h2>
             </div>
             
@@ -372,22 +354,20 @@ const ProjectsSection = () => {
                   }}
                 >
                   {/* Project Image */}
-                  <div className="h-48 relative overflow-hidden">
-                    <div className={`w-full h-full bg-gradient-to-br ${project.gradient} opacity-80 flex items-center justify-center`}>
-                      <div className="text-white text-center">
-                        <FiCode className="w-16 h-16 mx-auto mb-4 opacity-70" />
-                        <span className="text-sm font-mono opacity-90">{project.name}</span>
-                      </div>
-                    </div>
-                    
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                      <button className="px-6 py-3 bg-cyan-500/20 border border-cyan-400/50 rounded-full text-cyan-300 font-mono text-sm tracking-wider transition-all duration-300 hover:bg-cyan-500/30 hover:scale-110">
-                        VIEW PROJECT
-                      </button>
-                    </div>
-                  </div>
-
+<div className="h-48 relative overflow-hidden">
+  <img 
+    src={project.image} 
+    alt={project.name}
+    className="w-full h-full object-cover"
+  />
+  {/* Gradient Overlay */}
+  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-60 flex items-center justify-center`}>
+    <div className="text-white text-center">
+      <FiCode className="w-16 h-16 mx-auto mb-4 opacity-70" />
+      <span className="text-sm font-mono opacity-90">{project.name}</span>
+    </div>
+  </div>
+</div>
                   {/* Project Content */}
                   <div className="p-6">
                     {/* Project Name */}
@@ -409,7 +389,7 @@ const ProjectsSection = () => {
                       {project.skills.map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
-                          className="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300 text-xs font-mono transition-all duration-300 hover:bg-cyan-500/20 hover:scale-105"
+                          className="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300 text-xs font-mono"
                         >
                           {skill}
                         </span>
@@ -423,29 +403,18 @@ const ProjectsSection = () => {
                         className="flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-all duration-300 group/link"
                         style={{ fontFamily: "'Share Tech Mono', monospace" }}
                       >
-                        <span className="text-sm tracking-wider">EXPLORE</span>
+                        <span className="text-sm tracking-wider">VIEW PROJECT</span>
                         <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse group-hover/link:scale-150 transition-transform duration-300" />
                       </a>
-                      
-                      {/* Live Demo Indicator */}
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                        <span className="text-green-400 text-xs font-mono">LIVE</span>
-                      </div>
                     </div>
                   </div>
 
-                  {/* Neon Corner Accents */}
-                  <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-cyan-400/60 rounded-tl-lg" />
-                  <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-cyan-400/60 rounded-tr-lg" />
-                  <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-cyan-400/60 rounded-bl-lg" />
-                  <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-cyan-400/60 rounded-br-lg" />
-                </div>
+                  </div>
               ))}
             </div>
           </div>
         </div>
-
+     
         {/* Background Grid Pattern */}
         <div className="absolute inset-0 pointer-events-none opacity-5">
           <div className="w-full h-full" style={{
@@ -660,21 +629,18 @@ const ContactSection = () => {
       title: 'EMAIL',
       value: 'harshch002@gmail.com',
       link: 'mailto:harshch002@gmail.com',
-      color: 'from-cyan-400 to-blue-500'
     },
     {
       icon: FiLinkedin,
       title: 'LINKEDIN',
-      value: 'linkedin.com/in/harshita-chelani',
+      value: 'harshita-chelani',
       link: 'https://linkedin.com/in/harshita-chelani-8a92a2272/',
-      color: 'from-purple-400 to-pink-500'
     },
     {
       icon: FiGithub,
       title: 'GITHUB',
-      value: 'github.com/7012',
-      link: 'https://github.com/7012',
-      color: 'from-green-400 to-cyan-500'
+      value: 'grim7012',
+      link: 'https://github.com/grim7012',
     }
   ];
 
@@ -687,222 +653,187 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
   };
 
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center p-5 bg-black">
-      <div className="w-full h-[calc(150vh-10px)] rounded-[40px] bg-gradient-to-br from-cyan-900/10 to-purple-900/10 shadow-2xl border border-cyan-500/30 overflow-hidden relative backdrop-blur-sm">
+    <section id="contact" className="min-h-screen flex items-center justify-center p-8 bg-black">
+      <div className="w-full max-w-6xl rounded-3xl bg-gradient-to-br from-cyan-900/5 to-purple-900/5 border border-cyan-500/20 overflow-hidden backdrop-blur-sm">
         
-        {/* Section Title */}
-        <div className="absolute top-12 left-1/2 transform -translate-x-1/2 z-10 text-center">
-          <h2 
-            className="text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4"
-            style={{
-              fontFamily: "'Orbitron', monospace",
-              textShadow: '0 0 30px rgba(6, 182, 212, 0.7), 0 0 60px rgba(147, 51, 234, 0.5)'
-            }}
-          >
-            CONTACT ME
-          </h2>
-          <p 
-            className="text-gray-300 text-lg max-w-2xl mx-auto"
-            style={{ fontFamily: "'Share Tech Mono', monospace" }}
-          >
-            Ready to bring your ideas to life? Let's create something extraordinary together.
-          </p>
-          <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto mt-6 glow-cyan" />
-        </div>
-
         {/* Main Content */}
-        <div className="w-full h-full flex items-center justify-center pt-32">
-          <div className="w-4/5 h-4/5 flex gap-12">
-            
-            {/* Left Side - Contact Methods */}
-            <div className="w-2/5 h-full flex flex-col justify-center space-y-8">
-              <h3 
-                className="text-xl font-bold text-cyan-300 mb-6 tracking-wider"
-                style={{ fontFamily: "'Orbitron', monospace" }}
-              >
-                GET IN TOUCH
-              </h3>
-              
-              {contactMethods.map((method, index) => (
-                <a
-                  key={index}
-                  href={method.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative bg-black/40 rounded-2xl p-6 border border-cyan-500/30 backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:border-cyan-400/60 hover:shadow-glow-cyan"
+        <div className="w-full flex flex-col lg:flex-row">
+          
+          {/* Left Side - Photo & Contact Info */}
+          <div className="w-full lg:w-2/5 p-12 flex flex-col items-center lg:items-start space-y-12">
+            {/* Circular Photo */}
+            <div className="relative">
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-cyan-400/30">
+                <img 
+                  src="/Harshita.jpeg" // Replace with your photo path
+                  alt="Harshita Chelani"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-full border-2 border-cyan-400/20 animate-pulse" />
+            </div>
+
+            {/* Contact Info */}
+            <div className="text-center lg:text-left space-y-8">
+              <div>
+                <h2 
+                  className="text-3xl font-bold text-white mb-3"
+                  style={{ fontFamily: "'Orbitron', monospace" }}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${method.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <method.icon className="w-6 h-6 text-white" />
+                  Harshita Chelani
+                </h2>
+                <p 
+                  className="text-cyan-300 text-lg"
+                  style={{ fontFamily: "'Share Tech Mono', monospace" }}
+                >
+                  Full Stack Developer
+                </p>
+              </div>
+
+              {/* Contact Methods */}
+              <div className="space-y-4">
+                {contactMethods.map((method, index) => (
+                  <a
+                    key={index}
+                    href={method.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-3 rounded-xl hover:bg-cyan-500/5 transition-all duration-300 group"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center group-hover:border-cyan-400/40 transition-colors duration-300">
+                      <method.icon className="w-5 h-5 text-cyan-400" />
                     </div>
                     <div className="flex-1">
-                      <h4 
-                        className="text-cyan-300 font-bold text-lg mb-1 tracking-wider"
+                      <p 
+                        className="text-cyan-300 text-sm font-medium tracking-wide"
                         style={{ fontFamily: "'Orbitron', monospace" }}
                       >
                         {method.title}
-                      </h4>
+                      </p>
                       <p 
-                        className="text-gray-300 text-sm"
+                        className="text-gray-400 text-sm"
                         style={{ fontFamily: "'Share Tech Mono', monospace" }}
                       >
                         {method.value}
                       </p>
                     </div>
-                    <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse group-hover:scale-150 transition-transform duration-300" />
-                  </div>
-                  
-                  {/* Neon Corner Accents */}
-                  <div className="absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-cyan-400/60 rounded-tl-lg" />
-                  <div className="absolute top-0 right-0 w-3 h-3 border-r-2 border-t-2 border-cyan-400/60 rounded-tr-lg" />
-                  <div className="absolute bottom-0 left-0 w-3 h-3 border-l-2 border-b-2 border-cyan-400/60 rounded-bl-lg" />
-                  <div className="absolute bottom-0 right-0 w-3 h-3 border-r-2 border-b-2 border-cyan-400/60 rounded-br-lg" />
-                </a>
-              ))}
+                  </a>
+                ))}
+              </div>
 
-              {/* Status Indicator */}
-              <div className="flex items-center gap-3 mt-8 p-4 bg-black/30 rounded-2xl border border-green-500/30">
-                <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse glow-green" />
+              {/* Status */}
+              <div className="flex items-center gap-3 p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 <span 
-                  className="text-green-400 text-sm tracking-wider"
+                  className="text-green-400 text-sm"
                   style={{ fontFamily: "'Share Tech Mono', monospace" }}
                 >
-                  CURRENTLY AVAILABLE FOR NEW PROJECTS
+                  Available for new projects
                 </span>
               </div>
             </div>
+          </div>
 
-            {/* Right Side - Contact Form */}
-            <div className="w-3/5 h-full flex flex-col justify-center ">
-              <div className="bg-black/40 rounded-3xl p-8 border border-cyan-500/30 backdrop-blur-sm">
+          {/* Right Side - Contact Form */}
+          <div className="w-full lg:w-3/5 p-12 lg:pl-0">
+            <div className="max-w-2xl">
+              <div className="mb-12">
                 <h3 
-                  className="text-2xl font-bold text-purple-300 mb-6 tracking-wider"
+                  className="text-4xl font-bold text-white mb-4"
                   style={{ fontFamily: "'Orbitron', monospace" }}
                 >
-                  SEND MESSAGE
+                  Let's Work Together
                 </h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="group">
-                      <label 
-                        className="block text-cyan-300 text-sm mb-3 tracking-wider"
-                        style={{ fontFamily: "'Share Tech Mono', monospace" }}
-                      >
-                        YOUR NAME
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        className="w-full bg-black/50 border border-cyan-500/30 rounded-2xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:shadow-glow-cyan transition-all duration-300"
-                        placeholder="Enter your name"
-                        style={{ fontFamily: "'Share Tech Mono', monospace" }}
-                        required
-                      />
-                    </div>
-                    
-                    <div className="group">
-                      <label 
-                        className="block text-cyan-300 text-sm mb-3 tracking-wider"
-                        style={{ fontFamily: "'Share Tech Mono', monospace" }}
-                      >
-                        EMAIL ADDRESS
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        className="w-full bg-black/50 border border-cyan-500/30 rounded-2xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:shadow-glow-cyan transition-all duration-300"
-                        placeholder="your.email@example.com"
-                        style={{ fontFamily: "'Share Tech Mono', monospace" }}
-                        required
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="group">
+                <p 
+                  className="text-gray-400 text-lg leading-relaxed"
+                  style={{ fontFamily: "'Share Tech Mono', monospace" }}
+                >
+                  Have a project in mind? I'd love to hear about it. 
+                  Send me a message and let's create something amazing.
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
                     <label 
-                      className="block text-cyan-300 text-sm mb-3 tracking-wider"
+                      className="block text-cyan-300 text-sm tracking-wide"
                       style={{ fontFamily: "'Share Tech Mono', monospace" }}
                     >
-                      YOUR MESSAGE
+                      NAME
                     </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
                       onChange={handleInputChange}
-                      rows={5}
-                      className="w-full bg-black/50 border border-cyan-500/30 rounded-2xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:shadow-glow-cyan transition-all duration-300 resize-none"
-                      placeholder="Tell me about your project..."
+                      className="w-full bg-black/30 border border-cyan-500/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:bg-black/50 transition-all duration-300"
+                      placeholder="Your name"
                       style={{ fontFamily: "'Share Tech Mono', monospace" }}
                       required
                     />
                   </div>
                   
-                  <button
-                    type="submit"
-                    className="relative group w-full mt-6"
+                  <div className="space-y-3">
+                    <label 
+                      className="block text-cyan-300 text-sm tracking-wide"
+                      style={{ fontFamily: "'Share Tech Mono', monospace" }}
+                    >
+                      EMAIL
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full bg-black/30 border border-cyan-500/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:bg-black/50 transition-all duration-300"
+                      placeholder="your.email@example.com"
+                      style={{ fontFamily: "'Share Tech Mono', monospace" }}
+                      required
+                    />
+                  </div>
+                </div>
+                
+                <div className="space-y-3">
+                  <label 
+                    className="block text-cyan-300 text-sm tracking-wide"
+                    style={{ fontFamily: "'Share Tech Mono', monospace" }}
                   >
-                    {/* Animated border */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-                    
-                    {/* Button content */}
-                    <div className="relative px-8 py-4 bg-black rounded-2xl leading-none flex items-center justify-center gap-3">
-                      <span 
-                        className="text-cyan-300 font-bold tracking-wider group-hover:text-cyan-200 transition-colors duration-300 text-lg"
-                        style={{ fontFamily: "'Orbitron', monospace" }}
-                      >
-                        SEND MESSAGE
-                      </span>
-                      <FiMail className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                  </button>
-                </form>
-              </div>
+                    MESSAGE
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={6}
+                    className="w-full bg-black/30 border border-cyan-500/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:bg-black/50 transition-all duration-300 resize-none"
+                    placeholder="Tell me about your project..."
+                    style={{ fontFamily: "'Share Tech Mono', monospace" }}
+                    required
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-cyan-500/10 border border-cyan-400/30 rounded-xl py-4 text-cyan-300 font-medium tracking-wide hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 flex items-center justify-center gap-3 group"
+                  style={{ fontFamily: "'Orbitron', monospace" }}
+                >
+                  SEND MESSAGE
+                  <FiSend className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+              </form>
             </div>
           </div>
         </div>
-
-        
-        {/* Background Grid Pattern */}
-        <div className="absolute inset-0 pointer-events-none opacity-5">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.8) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.8) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }} />
-        </div>
-
-        {/* Floating Neon Elements */}
-        </div>
-
-      <style jsx>{`
-        .glow-cyan {
-          box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
-        }
-        
-        .glow-green {
-          box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
-        }
-        
-        .hover\\:shadow-glow-cyan:hover {
-          box-shadow: 0 0 30px rgba(6, 182, 212, 0.4), 0 0 60px rgba(6, 182, 212, 0.2);
-        }
-      `}</style>
+      </div>
     </section>
   );
 };
-
 // Main Portfolio Component
 export default function MinimalPortfolio() {
   return (
