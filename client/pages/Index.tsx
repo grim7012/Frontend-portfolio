@@ -3,6 +3,7 @@ import { FiSend, FiMail, FiLinkedin, FiGithub, FiCode, FiDatabase, FiBarChart2, 
 import Hyperspeed from "./Hyperspeed";
 import DecryptedText from './DecryptedText';
 import FlowingMenu from './FlowingMenu';
+import UI from "./UI";
 
 
 const MinimalNav = () => {
@@ -33,7 +34,7 @@ const MinimalNav = () => {
 
         <div className="flex items-center gap-6">
           {['About', 'Projects', 'Contact'].map((item) => (
-            <a 
+            <><a 
               key={item} 
               href={`#${item.toLowerCase()}`} 
               className="text-gray-400 hover:text-cyan-300 transition-all duration-500 text-sm font-light hover:glow-cyan-text"
@@ -41,6 +42,10 @@ const MinimalNav = () => {
             >
               {item}
             </a>
+            <a href="/ui" className="text-gray-400 hover:text-cyan-300 transition-all duration-500 text-sm font-light hover:glow-cyan-text">
+              UI
+            </a>
+            </>
           ))}
         </div>
 
@@ -851,6 +856,7 @@ export default function MinimalPortfolio() {
     </div>
   );
 }
+
 
 // Add this CSS for glow effects
 const styles = `

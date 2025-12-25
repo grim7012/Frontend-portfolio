@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         'heading': ['Lora', 'serif'],
         'body': ['Inter', 'sans-serif'],
+        'island-moments': ['"Island Moments"', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
