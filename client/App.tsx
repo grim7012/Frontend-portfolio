@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import UI from "./pages/UI";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,11 @@ const App = () => (
                 title="My Work" 
                 description="Explore my portfolio of web development projects and data analysis work." 
               />
+            } 
+          />
+          <Route 
+            path="/ui" 
+            element={<UI />
             } 
           />
           <Route 
