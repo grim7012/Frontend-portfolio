@@ -32,7 +32,7 @@ const MinimalNav = () => {
           Harshita Chelani
         </span>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6"><>
           {['About', 'Projects', 'Contact'].map((item) => (
             <><a 
               key={item} 
@@ -42,11 +42,13 @@ const MinimalNav = () => {
             >
               {item}
             </a>
-            <a href="/ui" className="text-gray-400 hover:text-cyan-300 transition-all duration-500 text-sm font-light hover:glow-cyan-text">
-              UI
-            </a>
             </>
+
           ))}
+          {/* <a href="/ui" className="text-gray-400 hover:text-cyan-300 transition-all duration-500 text-sm font-light hover:glow-cyan-text">
+              UI
+            </a> */}
+            </>
         </div>
 
         <div className="flex items-center gap-5 text-gray-400">
